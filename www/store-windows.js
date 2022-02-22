@@ -2153,7 +2153,7 @@ store.refresh = function() {
 /// ```
 
 ///
-/// ## <a name="launchPriceChangeConfirmationFlow"></a>*store.launchPriceChangeConfirmationFlow(callback)*
+/// ## <a name="launchPriceChangeConfirmationFlow"></a>*store.launchPriceChangeConfirmationFlow(productId, callback)*
 ///
 /// Android only: display a generic dialog notifying the user of a subscription price change.
 ///
@@ -2164,9 +2164,10 @@ store.refresh = function() {
 /// ##### example usage
 ///
 /// ```js
-///    store.launchPriceChangeConfirmationFlow(function(status) {
+///    store.launchPriceChangeConfirmationFlow(function('product_id', status) {
 ///      if (status === "OK") { /* approved */ }
 ///      if (status === "UserCanceled") { /* dialog canceled by user */ }
+///      if (status === "UnknownProduct") { /* trying to update price of an unregistered product */ }
 ///    }));
 /// ```
 
@@ -3001,7 +3002,7 @@ if (typeof Object.assign != 'function') {
     };
 }
 
-store.version = '11.0.0';
+store.version = '11.0.1';
 /*
  * Copyright (C) 2012-2013 by Guillaume Charhon
  * Modifications 10/16/2013 by Brian Thurlow

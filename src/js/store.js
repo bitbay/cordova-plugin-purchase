@@ -395,4 +395,4 @@ store.getGroup = function(groupId) {
 // #include "utils.js"
 // #include "polyfills.js"
 
-store.version = '11.0.0';
+store.version = '11.0.1';
