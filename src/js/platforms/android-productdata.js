@@ -175,7 +175,8 @@
                 store.log.debug("inappbilling.getPurchases() -> Success");
                 store.log.debug("                            -> " + typeof purchases);
                 store.log.debug("                            -> " + JSON.stringify(purchases));
-                // store.iabUpdatePurchases(purchases); (sent to the setPurchases listener)
+                // (sent to the setPurchases listener) ?
+                store.iabUpdatePurchases(purchases);
                 store.ready(true);
                 if (callback) callback();
             },
